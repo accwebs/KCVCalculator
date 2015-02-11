@@ -1,0 +1,62 @@
+******************************************************
+Title       : KCVCalculator
+
+Authors     : Aaron Curley <accwebs@gmail.com>
+
+GlobalPlatform library authors (at time of source code copying):
+              Snit Mo <snitmo@gmail.com>
+              Karsten Ohme <k_o_@users.sourceforge.net>
+              Matheus Ribeiro <mfribeiro@gmail.com>
+              Augusto Makiyama <augusto.cesar.makiyama@gmail.com>
+              João Victor <jvictor32@gmail.com>
+              Kjell M. Myksvoll <kmyksvo@online.no>
+              Sergio Campos <sergio.campos@grupoquali.com.br>
+              François Kooman <fkooman@tuxed.net>
+              Jacek Trzcinski <jackaleph3@gmail.com>
+
+License     : See file LICENSE
+Requires    : OpenSSL http://www.openssl.org/
+******************************************************
+
+--------------------------
+  Introduction & Credits
+--------------------------
+
+KCVCalculator is a simple command line tool that calculates the Key Check Values (KCVs) for
+Global Platform and Red Hat Certificate System's \'tkstool\'.  This can be helpful when you 
+want to use a specified key for testing/debugging purposes and you need the key's associated
+KCV(s).  I probably should have written this in Python, but oh well :-)
+
+A bunch of crypto code was copied from the open source GlobalPlatform library.
+
+This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit.
+ (http://www.openssl.org/)
+
+ 
+--------------------------
+ Downloading & Compiling
+--------------------------
+
+Due to the simplistic and "beta" nature of the code, the author does not intend to distribute 
+binaries at this time.  Compilation is fairly simple; however, using CMake.  
+
+Required third party dependencies:
+* OpenSSL        (headers and libraries)
+
+Tested compilers:
+* Visual Studio 2010
+* Visual Studio 2013
+* GCC 4.8 64-bit
+
+
+--------------------------
+ Program Use & Execution
+--------------------------
+Usage: 
+  KCVCalculator.exe <key bytes (ASCII-hex)>
+
+Example:
+  KCVCalculator.exe 40:41:42:43:44:45:46:47:48:49:4A:4B:4C:4D:4E:4F
+  <snip>
+  GP KCV:      8b:af:47
+  tkstool KCV: 8b:af:47:3f
