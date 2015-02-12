@@ -1,5 +1,6 @@
 ******************************************************
 Title       : KCVCalculator
+Project URL : https://github.com/accwebs/KCVCalculator
 
 Authors     : Aaron Curley <accwebs@gmail.com>
 
@@ -23,7 +24,7 @@ Requires    : OpenSSL http://www.openssl.org/
 --------------------------
 
 KCVCalculator is a simple command line tool that calculates the Key Check Values (KCVs) for
-Global Platform and Red Hat Certificate System's \'tkstool\'.  This can be helpful when you 
+Global Platform and Red Hat Certificate System's 'tkstool'.  This can be helpful when you 
 want to use a specified key for testing/debugging purposes and you need the key's associated
 KCV(s).  I probably should have written this in Python, but oh well :-)
 
